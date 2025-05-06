@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Cultura" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Cultura" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/primarna_boja</item>
+        <item name="colorPrimaryVariant">@color/primarna_boja</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/sekundarna_boja</item>
+        <item name="colorSecondaryVariant">@color/sekundarna_boja</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:statusBarColor" >@color/primarna_boja</item>
+
+    </style>
+
 </resources>
+
