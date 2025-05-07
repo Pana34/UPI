@@ -9,31 +9,35 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.4"
+        android:alpha="0.1"
         android:background="@color/primarna_boja" />
 
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/logo"
+        android:id="@+id/logo"
+        android:contentDescription="@string/logo_app"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="7dp" />
+        android:layout_marginTop="7dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dobrodošli!"
+        android:layout_marginTop="20dp"
+        android:text="@string/dobrodosli"
         android:textColor="@color/primarna_boja"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:layout_marginTop="240dp"
+        android:layout_below="@id/logo"
         android:layout_centerHorizontal="true" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom= "true"
+        android:layout_marginTop="30dp"
         app:cardCornerRadius="30dp"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="10dp"
@@ -52,7 +56,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PRIJAVA"
+                android:text="@string/prijava_tekst"
                 android:alpha="0.8"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
@@ -66,7 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-mail:"
+                android:text="@string/email_uputa"
                 android:alpha="0.8"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
@@ -74,8 +78,10 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
+                android:hint="@string/email_unos"
                 android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
                 android:drawableEnd="@drawable/mailikona"/>
 
             <View
@@ -85,16 +91,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Zaporka:"
-                android:alpha="0.8"
+                android:text="@string/zaporka_uputa"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
+                android:hint="@string/zaporka_unos"
                 android:inputType="textPassword"
+                android:autofillHints="password"
                 android:drawableEnd="@drawable/lozinkaikona"/>
 
             <RelativeLayout
@@ -104,24 +111,22 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ostani prijavljen/a."
-                    android:textSize="20sp"
+                    android:text="@string/ostani_prijavljen"
+                    android:id="@+id/ostaniprijavljen"
+                    android:textSize="17sp"
                     android:textColor="@color/primarna_boja"
                     android:layout_centerVertical="true"
-                    android:alpha="0.8" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"/>
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="30dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ZABORAVLJENA ZAPORKA"
+                    android:text="@string/zaboravljena_zaporka"
                     android:layout_alignParentEnd="true"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="@color/primarna_boja"
-                    android:alpha="0.8" />
+                    android:layout_toEndOf="@id/ostaniprijavljen"/>
             </RelativeLayout>
 
             <View
@@ -129,10 +134,11 @@
                 android:layout_height="20dp"/>
             
             <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="PRIJAVI SE"
-                app:cornerRadius="30dp" />
+                android:text="@string/prijavi_se_gumb"
+                app:cornerRadius="30dp"
+                android:layout_gravity="center"/>
 
             <View
                 android:layout_width="wrap_content"
@@ -141,7 +147,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ili"
+                android:text="@string/ili"
                 android:alpha="0.8"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
@@ -157,13 +163,15 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="10dp"
-                    android:background="@drawable/googleikona"/>
+                    android:background="@drawable/googleikona"
+                    android:contentDescription="@string/logo_google_prijava"/>
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_margin="10dp"
-                    android:background="@drawable/fblogo"/>
+                    android:background="@drawable/fblogo"
+                    android:contentDescription="@string/logo_fb_prijava"/>
 
             </LinearLayout>
 

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Cultura</string>
+    <string name="ostani_prijavljen">Ostani prijavljen/a.</string>
+    <string name="email_unos">Unesite e-mail</string>
+    <string name="zaporka_unos">Unesite zaporku</string>
+    <string name="dobrodosli">Dobrodošli!</string>
+    <string name="prijava_tekst">PRIJAVA</string>
+    <string name="email_uputa">E-mail:</string>
+    <string name="zaporka_uputa">Zaporka:</string>
+    <string name="zaboravljena_zaporka">ZABORAVLJENA ZAPORKA</string>
+    <string name="ili">ili</string>
+    <string name="prijavi_se_gumb">PRIJAVI SE</string>
+    <string name="logo_google_prijava">Logo za prijavu putem Google računa</string>
+    <string name="logo_fb_prijava">Logo za prijavu putem Facebook računa</string>
+    <string name="logo_app">Logo aplikacije Cultura</string>
 </resources>
