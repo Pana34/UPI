@@ -1,6 +1,8 @@
 package com.example.cultura
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -20,6 +22,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         enableEdgeToEdge()
+        val prijavaButton = findViewById<Button>(R.id.prijavagumb)
+        prijavaButton.setOnClickListener {
+            val intent = Intent(this, GlavnaStranica::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
 

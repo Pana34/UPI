@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.1"
+        android:alpha="0.25"
         android:background="@color/primarna_boja" />
 
     <ImageView
@@ -137,6 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="@string/prijavi_se_gumb"
+                android:id="@+id/prijavagumb"
                 app:cornerRadius="30dp"
                 android:layout_gravity="center"/>
 

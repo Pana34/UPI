@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+         <item
+             android:id="@+id/nav_pocetna"
+             android:icon="@drawable/pocetnaikona"
+             android:title="Početna" />
+         <item
+             android:id="@+id/nav_profil"
+             android:icon="@drawable/profilikona"
+             android:title="Profil" />
+         <item
+             android:id="@+id/nav_postavke"
+             android:icon="@drawable/postavkeikona"
+             android:title="Postavke" />
+    </menu>

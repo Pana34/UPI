@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primarna_boja">#395F81</color>
-    <color name="sekundarna_boja">#4879A3</color>
+    <color name="navigacija">#B15B656F</color>
+    <color name="sekundarna_boja">#5E6FDAE7</color>
+
 </resources>
