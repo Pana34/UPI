@@ -30,6 +30,9 @@
             android:name=".PostavkeActivity"
             android:theme="@style/Theme.Cultura" />
 
+        <activity android:name=".ProfilActivity" android:exported="false" />
+
+
 
     </application>
 

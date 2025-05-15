@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profil_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Pozadina boje s prozirnošću -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/primarna_boja"
+        android:alpha="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Valovita slika -->
+    <ImageView
+        android:id="@+id/waveBackground"
+        android:layout_width="900dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/valovi_poza"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Donja navigacija -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/donja_nav_menu"
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_boja"
+        app:itemTextColor="@color/nav_boja"
+        app:itemBackground="@drawable/navigacija_crta" />
+</androidx.constraintlayout.widget.ConstraintLayout>

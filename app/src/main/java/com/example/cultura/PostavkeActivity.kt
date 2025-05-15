@@ -11,7 +11,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.activity.enableEdgeToEdge
 
-
 class PostavkeActivity : AppCompatActivity() {
 
     private val PREFS_NAME = "Postavke"
@@ -23,9 +22,8 @@ class PostavkeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-
         setContentView(R.layout.activity_postavke)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.postavke_root)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -91,9 +89,13 @@ class PostavkeActivity : AppCompatActivity() {
                 R.id.nav_pocetna -> {
                     val intent = Intent(this, GlavnaStranica::class.java)
                     startActivity(intent)
+                    finish()
                     true
                 }
                 R.id.nav_profil -> {
+                    val intent = Intent(this, ProfilActivity::class.java)
+                    startActivity(intent)
+                    finish()
                     true
                 }
                 R.id.nav_postavke -> true
