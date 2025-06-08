@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.activity.enableEdgeToEdge
 
-class PostavkeActivity : AppCompatActivity() {
+    class PostavkeActivity : AppCompatActivity() {
 
     private val PREFS_NAME = "Postavke"
     private val KEY_JEZIK = "jezik"

@@ -13,23 +13,28 @@ import org.junit.runner.RunWith
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 
 @RunWith(AndroidJUnit4::class)
-class MainActivityTest {
+class GumbPrijavaUnitTest {
 
+    // Pravilo koje automatski pokreće MainActivity prije svakog testa
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
+    //Metoda za inicijalizaciju praćenja Intenta (prije svakog testa)
     @Before
-    fun setUp() {
+    fun priprema() {
         init()
     }
 
+    //Metoda za oslobađanje resursa povezanih s Intentom (nakon svakog testa)
     @After
-    fun tearDown() {
+    fun reset() {
         release()
     }
 
+    // Test provjerava da klik na gumb 'prijavagumb' pokreće aktivnost GlavnaStranica
     @Test
-    fun testLoginButtonOpensGlavnaStranica() {
+    fun glavnaStranicaUnitTest() {
+        // Simulacija klika na gumb za prijavu
         onView(withId(R.id.prijavagumb)).perform(click())
         intended(hasComponent(GlavnaStranica::class.java.name))
     }
