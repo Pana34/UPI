@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/pitanjeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pitanje će biti ovdje"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <RadioGroup
+            android:id="@+id/opcijeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/opcija1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcija 1" />
+
+            <RadioButton
+                android:id="@+id/opcija2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcija 2" />
+
+            <RadioButton
+                android:id="@+id/opcija3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcija 3" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/sljedeciButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sljedeće pitanje"
+            android:layout_marginTop="32dp" />
+
+    </LinearLayout>
+</ScrollView>

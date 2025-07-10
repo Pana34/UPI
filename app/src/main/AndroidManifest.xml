@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Cultura"
         tools:targetApi="31">
         <activity
+            android:name=".KvizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetaljiDestinacijeActivity"
+            android:exported="false" />
+        <activity
             android:name=".GlavnaStranica"
             android:exported="false" />
         <activity
@@ -29,10 +35,10 @@
         <activity
             android:name=".PostavkeActivity"
             android:theme="@style/Theme.Cultura" />
-
-        <activity android:name=".ProfilActivity" android:exported="false" />
-
-
+        <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+        <activity android:name=".RegisterActivity" />
 
     </application>
 

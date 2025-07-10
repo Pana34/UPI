@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,30 +15,30 @@
         android:layout_height="250dp"
         android:src="@drawable/logo"
         android:id="@+id/logo"
-        android:contentDescription="@string/logo_app"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="7dp"/>
+        android:layout_marginTop="7dp"
+        android:contentDescription="@string/logo_app" />
 
+    <!-- Dobrodošli! -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
         android:text="@string/dobrodosli"
         android:textColor="@color/primarna_boja"
         android:textSize="35sp"
         android:textStyle="bold"
         android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
+    <!-- Kartica za unos -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
         android:layout_marginBottom="40dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         app:cardCornerRadius="30dp">
 
         <LinearLayout
@@ -48,104 +47,88 @@
             android:orientation="vertical"
             android:padding="30dp">
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
-
+            <!-- Naslov unutar kartice -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/prijava_tekst"
+                android:text="REGISTRACIJA"
                 android:alpha="0.8"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_gravity="center" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+            <View android:layout_height="10dp" android:layout_width="wrap_content"/>
 
+            <!-- E-mail -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/email_uputa"
-                android:alpha="0.8"
+                android:text="Unesite e-mail"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/login_email"
+                android:id="@+id/register_email"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/email_unos"
+                android:hint="E-mail"
                 android:inputType="textEmailAddress"
-                android:autofillHints="emailAddress"
                 android:drawableEnd="@drawable/mailikona" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+            <View android:layout_height="10dp" android:layout_width="wrap_content"/>
 
+            <!-- Zaporka -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/zaporka_uputa"
+                android:text="Unesite zaporku"
                 android:textColor="@color/primarna_boja"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/login_password"
+                android:id="@+id/register_password"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/zaporka_unos"
+                android:hint="Zaporka"
                 android:inputType="textPassword"
-                android:autofillHints="password"
                 android:drawableEnd="@drawable/lozinkaikona" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <View android:layout_height="10dp" android:layout_width="wrap_content"/>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ostani_prijavljen"
-                    android:id="@+id/ostaniprijavljen"
-                    android:textSize="17sp"
-                    android:textColor="@color/primarna_boja"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="30dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/zaboravljena_zaporka"
-                    android:layout_alignParentEnd="true"
-                    android:textSize="13sp"
-                    android:textColor="@color/primarna_boja"
-                    android:layout_toEndOf="@id/ostaniprijavljen" />
-            </RelativeLayout>
-
-            <View
+            <!-- Potvrda zaporke -->
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="wrap_content"
+                android:text="Potvrdite zaporku"
+                android:textColor="@color/primarna_boja"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <EditText
+                android:id="@+id/register_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Potvrda zaporke"
+                android:inputType="textPassword"
+                android:drawableEnd="@drawable/lozinkaikona" />
+
+            <View android:layout_height="20dp" android:layout_width="wrap_content"/>
+
+            <!-- Gumb Registriraj se -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/prijavagumb"
+                android:id="@+id/register_button"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="@string/prijavi_se_gumb"
-                app:cornerRadius="30dp"
-                android:layout_gravity="center" />
+                android:text="REGISTRIRAJ SE"
+                android:layout_gravity="center"
+                app:cornerRadius="30dp" />
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+            <View android:layout_height="10dp" android:layout_width="wrap_content"/>
 
+            <!-- Tekst "ili" -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -155,6 +138,7 @@
                 android:textSize="20sp"
                 android:layout_gravity="center" />
 
+            <!-- Google & Facebook -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -176,20 +160,17 @@
                     android:contentDescription="@string/logo_fb_prijava" />
             </LinearLayout>
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+            <View android:layout_height="20dp" android:layout_width="wrap_content"/>
 
-            <!-- Dodani link za registraciju -->
+            <!-- Link za login -->
             <TextView
-                android:id="@+id/register_link"
+                android:id="@+id/login_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nemate račun? Registrirajte se"
+                android:text="Već imate račun? Prijavite se"
                 android:textColor="@color/primarna_boja"
                 android:textSize="16sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
+                android:layout_gravity="center" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

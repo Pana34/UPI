@@ -190,11 +190,16 @@
                         android:padding="8dp">
 
                         <ImageView
+                            android:id="@+id/slikaGrcka"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="GRČKA"
-                            android:src="@drawable/grcka" />
+                            android:src="@drawable/grcka"
+                            android:background="@drawable/rounded_image_background"
+                            android:clipToOutline="true"
+                            />
+
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -213,11 +218,16 @@
                         android:padding="8dp">
 
                         <ImageView
+                            android:id="@+id/slikaSpanjolska"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="ŠPANJOLSKA"
-                            android:src="@drawable/spanjolska" />
+                            android:src="@drawable/spanjolska"
+                            android:background="@drawable/rounded_image_background"
+                            android:clipToOutline="true"
+                            />
+
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -225,7 +235,8 @@
                             android:layout_marginTop="4dp"
                             android:text="ŠPANJOLSKA"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            />
                     </LinearLayout>
 
                     <LinearLayout
@@ -236,11 +247,16 @@
                         android:padding="8dp">
 
                         <ImageView
+                            android:id="@+id/slikaPortugal"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:contentDescription="PORTUGAL"
-                            android:src="@drawable/portugal" />
+                            android:src="@drawable/portugal"
+                            android:background="@drawable/rounded_image_background"
+                            android:clipToOutline="true"
+                            />
+
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -290,173 +306,181 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp"/>
 
-        <HorizontalScrollView
-                android:id="@+id/izbornik"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tekst_izbornik">
+    <HorizontalScrollView
+        android:id="@+id/izbornik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tekst_izbornik">
 
-                <LinearLayout
+        <!-- ✅ JEDAN LinearLayout kao jedino dijete -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- Ostale kategorije: Jezici, Običaji, Mjesta, Znamenitosti, Zabava, Hrana -->
+
+            <!-- Jezici -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/zaobljeni_izbornik"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/jezici"
+                    app:tint="@color/white" />
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="6dp"
+                    android:text="Jezici"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/zaobljeni_izbornik"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+            <!-- Običaji -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/zaobljeni_izbornik"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/jezici"
-                            app:tint="@color/white" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/kultura"
+                    app:tint="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Jezici"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Običaji"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/zaobljeni_izbornik"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+            <!-- Mjesta -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/zaobljeni_izbornik"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/kultura"
-                            app:tint="@color/white" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/mjesta"
+                    app:tint="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Običaji"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Mjesta"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/zaobljeni_izbornik"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+            <!-- Znamenitosti -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/zaobljeni_izbornik"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/mjesta"
-                            app:tint="@color/white" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/atrakcije"
+                    app:tint="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Mjesta"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Znamenitosti"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/zaobljeni_izbornik"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+            <!-- Zabava -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/zaobljeni_izbornik"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/atrakcije"
-                            app:tint="@color/white" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/zabava"
+                    app:tint="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Znamenitosti"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Zabava"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/zaobljeni_izbornik"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+            <!-- Hrana -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/zaobljeni_izbornik"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/zabava"
-                            app:tint="@color/white" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/hrana"
+                    app:tint="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Zabava"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-                    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Hrana"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/zaobljeni_izbornik"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+        </LinearLayout> <!-- Kraj jedinog dozvoljenog "child"-a HorizontalScrollView -->
+    </HorizontalScrollView>
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/hrana"
-                            app:tint="@color/white" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Hrana"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
-        <LinearLayout
+    <LinearLayout
             android:id="@+id/planski_blokovi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

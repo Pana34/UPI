@@ -2,6 +2,8 @@ package com.example.cultura
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,6 +23,7 @@ class ProfilActivity : AppCompatActivity() {
             insets
         }
 
+        // Bottom navigacija
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.selectedItemId = R.id.nav_profil
 
@@ -44,6 +47,26 @@ class ProfilActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        // ↓↓↓ Novi funkcionalni dio za prikaz emaila i odjavu ↓↓↓
+
+        val emailText = findViewById<TextView>(R.id.email_text)
+        val logoutButton = findViewById<Button>(R.id.logout_button)
+
+        val email = getSharedPreferences("CulturaPrefs", MODE_PRIVATE)
+            .getString("user_email", "Nepoznat")
+
+        emailText.text = "E-mail: $email"
+
+        logoutButton.setOnClickListener {
+            // Obriši prijavu
+            getSharedPreferences("CulturaPrefs", MODE_PRIVATE)
+                .edit().clear().apply()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
