@@ -13,4 +13,5 @@
     <string name="logo_google_prijava">Logo za prijavu putem Google računa</string>
     <string name="logo_fb_prijava">Logo za prijavu putem Facebook računa</string>
     <string name="logo_app">Logo aplikacije Cultura</string>
+    <string name="nazad">Natrag</string>
 </resources>

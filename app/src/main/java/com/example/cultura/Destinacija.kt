@@ -5,8 +5,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "destinacije")
 data class Destinacija(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     val naziv: String,
     val opis: String,
-    val slikaResId: Int
+    val slikaIme: String
 )

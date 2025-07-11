@@ -39,6 +39,8 @@
             android:name=".ProfilActivity"
             android:exported="false" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".FavoritiActivity" />
+        <activity android:name=".DodajFavoritaActivity" />
 
     </application>
 

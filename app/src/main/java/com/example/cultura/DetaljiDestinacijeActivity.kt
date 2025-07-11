@@ -54,7 +54,10 @@ class DetaljiDestinacijeActivity : AppCompatActivity() {
             val fraze  = db.frazaDao().getFrazeZaDestinaciju(id)
 
             runOnUiThread {
-                imageView.setImageResource(dest.slikaResId)
+                val resId = resources.getIdentifier(dest.slikaIme, "drawable", packageName)
+                imageView.setImageResource(
+                    if (resId != 0) resId else R.drawable.logo
+                )
                 nazivView.text = dest.naziv
                 opisView.text  = dest.opis
                 obicajiView.text = obicaj.joinToString("\n") { "• ${it.tekst}" }

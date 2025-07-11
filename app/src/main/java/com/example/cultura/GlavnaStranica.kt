@@ -29,81 +29,67 @@ class GlavnaStranica : AppCompatActivity() {
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_pocetna -> {
-                    // Već smo na ovoj stranici
-                    true
-                }
+                R.id.nav_pocetna -> true
                 R.id.nav_profil -> {
-                    val intent = Intent(this, ProfilActivity::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, ProfilActivity::class.java))
                     finish()
                     true
                 }
                 R.id.nav_postavke -> {
-                    val intent = Intent(this, PostavkeActivity::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, PostavkeActivity::class.java))
                     finish()
                     true
                 }
                 else -> false
             }
         }
+
         val db = AppDatabase.getDatabase(this)
 
         lifecycleScope.launch {
-            // Ubaci samo ako još nisu ubačene
             if (db.destinacijaDao().getSveDestinacije().isEmpty()) {
-                // Destinacije
                 val grcka = Destinacija(
-                    1, "Grčka",
-                    "Grčka je poznata po drevnoj povijesti, hramovima i bogatoj mitologiji. " +
+                    naziv = "Grčka",
+                    opis = "Grčka je poznata po drevnoj povijesti, hramovima i bogatoj mitologiji. " +
                             "Osim Atene i otoka, Grčka je i dom izvrsne kuhinje, plave arhitekture i srdačnih ljudi.",
-                    R.drawable.grcka
+                    slikaIme = "grcka"
                 )
 
                 val spanjolska = Destinacija(
-                    2, "Španjolska",
-                    "Španjolska kombinira sunčane plaže, bogatu povijest i živopisnu kulturu. " +
+                    naziv = "Španjolska",
+                    opis = "Španjolska kombinira sunčane plaže, bogatu povijest i živopisnu kulturu. " +
                             "Poznata je po flamenku, tapasu i arhitekturi Antonija Gaudija.",
-                    R.drawable.spanjolska
+                    slikaIme = "spanjolska"
                 )
 
                 val portugal = Destinacija(
-                    3, "Portugal",
-                    "Portugal oduševljava fado glazbom, povijesnim gradovima i plavim pločicama azulejos. " +
+                    naziv = "Portugal",
+                    opis = "Portugal oduševljava fado glazbom, povijesnim gradovima i plavim pločicama azulejos. " +
                             "Idealna je destinacija za istraživanje obale, vina i lokalne kulture.",
-                    R.drawable.portugal
+                    slikaIme = "portugal"
                 )
 
                 db.destinacijaDao().insert(grcka)
                 db.destinacijaDao().insert(spanjolska)
                 db.destinacijaDao().insert(portugal)
 
-                // Običaji
                 db.obicajDao().insertAll(
                     Obicaj(0, 1, "Zajedničko objedovanje uz mezze."),
                     Obicaj(0, 2, "Siesta – popodnevni odmor."),
                     Obicaj(0, 3, "Fado glazba kao izraz emocije i kulture.")
                 )
 
-                // Fraze
                 db.frazaDao().insertAll(
-                    // Grčka
                     Fraza(0, 1, "Kalimera", "Dobro jutro"),
                     Fraza(0, 1, "Kalispera", "Dobra večer"),
                     Fraza(0, 1, "Yassas", "Dobar dan / Pozdrav"),
-
-// Španjolska
                     Fraza(0, 2, "Buenos días", "Dobro jutro"),
                     Fraza(0, 2, "Buenas tardes", "Dobar dan"),
                     Fraza(0, 2, "Buenas noches", "Dobra večer"),
-
-// Portugal
                     Fraza(0, 3, "Bom dia", "Dobro jutro"),
                     Fraza(0, 3, "Boa tarde", "Dobar dan"),
                     Fraza(0, 3, "Boa noite", "Dobra večer")
-
-                    )
+                )
             }
         }
 
@@ -129,6 +115,11 @@ class GlavnaStranica : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // 🔁 NOVO: Otvaranje Favorita
+        val favoritiButton = findViewById<LinearLayout>(R.id.favoritiButton)
+        favoritiButton.setOnClickListener {
+            val intent = Intent(this, FavoritiActivity::class.java)
+            startActivity(intent)
+        }
     }
-
 }
