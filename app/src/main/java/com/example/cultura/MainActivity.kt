@@ -43,7 +43,6 @@ class MainActivity : ComponentActivity() {
                 }
 
                 if (user != null && user.password == password) {
-                    // 🔐 Spremi korisnički e-mail u SharedPreferences
                     getSharedPreferences("CulturaPrefs", MODE_PRIVATE)
                         .edit()
                         .putString("user_email", email)

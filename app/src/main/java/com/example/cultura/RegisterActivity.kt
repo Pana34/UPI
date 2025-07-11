@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class RegisterActivity : AppCompatActivity() {
-
+    
     private lateinit var db: AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +34,10 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Popunite sva polja", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
             if (password != confirmPassword) {
                 Toast.makeText(this, "Zaporke se ne podudaraju", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
             lifecycleScope.launch {
                 val existing = withContext(Dispatchers.IO) {
                     db.userDao().getUserByEmail(email)
@@ -52,9 +50,8 @@ class RegisterActivity : AppCompatActivity() {
                         db.userDao().insertUser(User(email, password))
                     }
 
-                    // ✅ Spremi email nakon uspješne registracije
-                    getSharedPreferences("CulturaPrefs", MODE_PRIVATE)
-                        .edit()
+                    getSharedPreferences("CulturaPrefs", MODE_PRIVATE).edit()
+
                         .putString("user_email", email)
                         .apply()
 
@@ -64,7 +61,6 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
         }
-
         loginLink.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()

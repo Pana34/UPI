@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Plava prozirna pozadina -->
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -17,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Valovita dekoracija -->
     <ImageView
         android:id="@+id/waveBackground"
         android:layout_width="900dp"
@@ -29,7 +27,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Gumb za natrag -->
     <ImageButton
         android:id="@+id/btn_natrag"
         android:layout_width="48dp"
@@ -55,8 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-
-    <!-- Lista svih destinacija -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_svih_destinacija"
         android:layout_width="0dp"

@@ -23,7 +23,6 @@ class ProfilActivity : AppCompatActivity() {
             insets
         }
 
-        // Bottom navigacija
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.selectedItemId = R.id.nav_profil
 
@@ -36,7 +35,6 @@ class ProfilActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_profil -> {
-                    // Već smo ovdje
                     true
                 }
                 R.id.nav_postavke -> {
@@ -49,7 +47,6 @@ class ProfilActivity : AppCompatActivity() {
             }
         }
 
-        // ↓↓↓ Novi funkcionalni dio za prikaz emaila i odjavu ↓↓↓
 
         val emailText = findViewById<TextView>(R.id.email_text)
         val logoutButton = findViewById<Button>(R.id.logout_button)
@@ -60,7 +57,6 @@ class ProfilActivity : AppCompatActivity() {
         emailText.text = "E-mail: $email"
 
         logoutButton.setOnClickListener {
-            // Obriši prijavu
             getSharedPreferences("CulturaPrefs", MODE_PRIVATE)
                 .edit().clear().apply()
 

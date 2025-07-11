@@ -11,12 +11,10 @@ import androidx.room.RoomDatabase
 )
 abstract class AppDatabase : RoomDatabase() {
 
-    // DAO-i za postojeće entitete
     abstract fun destinacijaDao(): DestinacijaDao
     abstract fun obicajDao(): ObicajDao
     abstract fun frazaDao(): FrazaDao
 
-    // DAO za korisnika
     abstract fun userDao(): UserDao
 
     companion object {
@@ -30,7 +28,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "cultura_baza"
                 )
-                    .fallbackToDestructiveMigration() // Briše i stvara novu bazu pri migraciji
+                    .fallbackToDestructiveMigration()
                     .build()
                     .also { INSTANCE = it }
             }

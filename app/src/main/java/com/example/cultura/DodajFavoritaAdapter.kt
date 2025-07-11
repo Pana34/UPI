@@ -26,7 +26,6 @@ class DodajFavoritaAdapter(
         val destinacija = destinacije[position]
         holder.naziv.text = destinacija
         holder.dodajBtn.setOnClickListener {
-            // Ovdje kasnije možeš dodati logiku za dodavanje favorita
         }
     }
 

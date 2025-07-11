@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Pozadina s prozirnom bojom -->
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Valovita dekoracija -->
     <ImageView
         android:id="@+id/waveBackground"
         android:layout_width="900dp"
@@ -30,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Scroll sadržaj -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -114,7 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="16dp" />
 
-    <!-- Gumb za povratak na samom dnu -->
     <Button
         android:id="@+id/gumbNatrag"
         android:layout_width="0dp"

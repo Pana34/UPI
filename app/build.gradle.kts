@@ -70,12 +70,16 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
 
     implementation("com.google.android.material:material:1.11.0")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-intents:3.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    testImplementation("junit:junit:4.13.2")
 }

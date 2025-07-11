@@ -20,7 +20,7 @@ class KvizActivity : AppCompatActivity() {
     private var pitanja: List<Pitanje> = listOf()
     private var trenutniIndex = 0
     private var bodovi = 0
-    private var destinacijaId = 1 // default
+    private var destinacijaId = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +64,7 @@ class KvizActivity : AppCompatActivity() {
         trenutno.opcije.forEach { opcija ->
             val radioButton = RadioButton(this)
             radioButton.text = opcija
+            radioButton.tag = "odgovorOpcija"
             radioGroup.addView(radioButton)
         }
     }

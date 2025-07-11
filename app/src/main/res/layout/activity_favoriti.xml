@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Poluprozirna pozadina -->
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Valovita pozadina -->
     <ImageView
         android:id="@+id/waveBackground"
         android:layout_width="900dp"
@@ -30,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Naslov "Favoriti" centriran -->
     <TextView
         android:id="@+id/naslovFavoriti"
         android:layout_width="wrap_content"
@@ -44,7 +41,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="60dp" />
 
-    <!-- Scroll sadržaj s RecyclerView i gumbom -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -82,7 +78,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Gumb za povratak -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/gumbNatrag"
         android:layout_width="0dp"

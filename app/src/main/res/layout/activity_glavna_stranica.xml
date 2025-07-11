@@ -321,14 +321,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tekst_izbornik">
 
-        <!-- ✅ JEDAN LinearLayout kao jedino dijete -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <!-- Ostale kategorije: Jezici, Običaji, Mjesta, Znamenitosti, Zabava, Hrana -->
 
-            <!-- Jezici -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -353,7 +350,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <!-- Običaji -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -378,7 +374,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <!-- Mjesta -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -403,7 +398,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <!-- Znamenitosti -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -428,7 +422,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <!-- Zabava -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -453,7 +446,6 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <!-- Hrana -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -478,7 +470,7 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
-        </LinearLayout> <!-- Kraj jedinog dozvoljenog "child"-a HorizontalScrollView -->
+        </LinearLayout>
     </HorizontalScrollView>
 
 

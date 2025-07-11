@@ -115,7 +115,6 @@ class GlavnaStranica : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // 🔁 NOVO: Otvaranje Favorita
         val favoritiButton = findViewById<LinearLayout>(R.id.favoritiButton)
         favoritiButton.setOnClickListener {
             val intent = Intent(this, FavoritiActivity::class.java)
